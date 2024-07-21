@@ -1,0 +1,210 @@
+
+:root {
+  --prm-light: #fff;
+  --scd-light: #f2f2f2;
+  --trd-light: #e0e0e0;
+  --qrt-light: #828282;
+  --text-light: #000;
+  --gradient-light: linear-gradient(rgb(245, 245, 245) 0%, rgb(245, 245, 245) 11%, rgb(247, 247, 247) 22%, rgb(247, 247, 247) 33%, rgb(250, 250, 250) 44%, rgb(250, 250, 250) 56%, rgb(252, 252, 252) 67%, rgb(252, 252, 252) 78%, rgb(255, 255, 255) 89%, rgb(255, 255, 255) 100%);
+
+  --prm-highlight-light: #694DFF;
+
+  --prm-dark: #1c1c1c;
+  --scd-dark: #343434;
+  --trd-dark: #ad8aff;
+  --qrt-dark: #151313;
+  --text-dark: #fff;
+  --gradient-dark: linear-gradient(#181a1b, #1c1c1c);
+
+  --prm-highlight-dark: #fff;
+
+  --prm: var(--prm-light);
+  --scd: var(--scd-light);
+  --trd: var(--trd-light);
+  --qrt: var(--qrt-light);
+  --text: var(--text-light);
+  --gradient: var(--gradient-light);
+  --prm-highlight: var(--prm-highlight-light);
+}
+
+@font-face { src: url("../public/Fonts/AvenirNextRoundedBold.ttf"); font-family: 'AvenirNextRoundedBold'; }
+@font-face { src: url("../public/Fonts/CLR.otf"); font-family: 'CLR'; }
+@font-face { src: url("../public/Fonts/DXLBaB.ttf"); font-family: 'DXLBaB'; }
+@font-face { src: url("../public/Fonts/PantonBlack.otf"); font-family: 'Panton Black'; }
+@font-face { src: url("../public/Fonts/PantonBlackItalic.otf"); font-family: 'Panton Black Italic'; }
+@font-face { src: url("../public/Fonts/PantonLight.otf"); font-family: 'Panton Light'; }
+@font-face { src: url("../public/Fonts/PantonLightItalic.otf"); font-family: 'Panton Light Italic'; }
+@font-face { src: url("../public/Fonts/Quicksand.ttf"); font-family: 'Quicksand'; }
+
+
+html, body, #root, .app__body {
+  color: var(--text);
+  font-family: "Hanken Grotesk", sans-serif;
+  user-select: none;
+  margin: 0;
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #F35 #1b1b1f55;
+  background-color: var(--prm-dark);
+}
+
+.dark {
+  --prm: var(--prm-dark);
+  --scd: var(--scd-dark);
+  --trd: var(--trd-dark);
+  --qrt: var(--qrt-dark);
+  --text: var(--text-dark);
+  --gradient: var(--gradient-dark);
+  --prm-highlight: var(--prm-highlight-dark);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px; 
+  width: fit-content !important;
+
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  background-color: var(--prm);
+  color: var(--text);
+
+  padding: 8px 32px;
+  border: 2px solid var(--text);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+button:hover {
+  box-shadow: -8px 4px 20px var(--trd);
+}
+
+button img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    text-align: center;
+    line-height: 1em;
+    font-size: 1em;
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.button--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.button--cancel {
+  padding: 8px 12px;
+  border: 1px solid var(--text) !important;
+}
+
+select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px; 
+
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  background-color: var(--prm);
+  color: var(--text);
+
+  padding: 8px 32px;
+  border: 2px solid var(--text);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+select:hover {
+  box-shadow: -8px 4px 20px var(--trd);
+}
+
+select img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    text-align: center;
+    line-height: 1em;
+    font-size: 1em;
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+input, textarea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px; 
+
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  background-color: var(--prm);
+  color: var(--text);
+
+  padding: 8px 32px;
+  border: 2px solid var(--scd);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+input:focus, textarea:focus {
+  box-shadow: -8px 4px 20px var(--trd);
+}
+
+.icon16 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.icon32 {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.icon48 {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.plx-rubine {
+  background-image: url('https://cdn.pollux.gg/images/gems/RBN.png');
+  background-size: contain;
+}
+
+.plx-sapphire {
+  background-image: url('https://cdn.pollux.gg/images/gems/SPH.png');
+  background-size: contain;
+}
+
+.plx-jade {
+  background-image: url('https://cdn.pollux.gg/images/gems/JDE.png');
+  background-size: contain;
+}

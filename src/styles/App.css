@@ -1,0 +1,135 @@
+.app__body {
+  background-color: var(--prm);
+  display: grid;
+  grid-template-areas:
+    /*'header'*//*'header'*/
+    'nav header'
+    'nav main';
+  grid-template-rows: min-content;
+  grid-template-columns: min-content;
+  overflow: hidden;
+}
+
+.app__nav {
+  background-color: var(--scd);
+  background-image: var(--gradient);
+  color: var(--qrt);
+  grid-area: nav;
+  display: flex;
+  width: 20ch;
+  flex-direction: column;
+  padding: 20px 0px;
+  position: sticky;
+}
+
+.nav__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all .2s;
+  position: sticky;
+}
+
+.nav__row:hover {
+  background-color: var(--trd);
+}
+
+.nav__row img {
+  display: inline-block;
+  width: auto;
+  height: 22px;
+}
+
+.nav__row span {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nav__row i {
+  color: var(--prm-highlight);
+  margin-left: auto;
+}
+
+.nav__opt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all .2s;
+  margin-top: auto;
+}
+
+.nav__opt select {
+  width: 116px;
+}
+
+.nav__opt i {
+  color: var(--prm-highlight);
+}
+
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+.select-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.select-container select {
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.app__main {
+  grid-area: main;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.app__header {
+  grid-area: header;
+  background-color: var(--qrt);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column
+}
+
+.nav__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  gap: 12px;
+}
+
+.nav__profile img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav__profile span {
+  color: var(--text);
+}
+
+.nav__profile i {
+  color: var(--prm-highlight);
+  margin-left: auto;
+}

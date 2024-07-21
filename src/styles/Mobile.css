@@ -1,0 +1,16 @@
+@media screen and (max-width: 1300px) {
+  .app__nav {
+    display: none;
+  }
+
+  .profile__header { flex-direction: column; }
+  .profile__tagline__input { width: 47%; }
+  .profile__ptxt__input { width: 83%; }
+  .phr__separator { flex-direction: column; }
+  .profile__header__sticker { width: unset; }
+  .profile__header__medals { width: unset; }
+  .profile__save__modal { 
+    width: max-content;
+    flex-direction: column;
+  }
+}
