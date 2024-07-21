@@ -3,7 +3,6 @@ import axios from "axios";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-
 import { initializeApp } from "@firebase/app";
 import { getDatabase, ref, set, update, onValue } from "@firebase/database";
 
@@ -22,22 +21,15 @@ const fbapp = initializeApp(firebaseConfig);
 const database = getDatabase(fbapp);
 
 let URI =
-  "https://522f218c-2579-4e40-884e-ff7107524681-00-1ikdcsak5olgv.janeway.replit.dev";
-let authUrl = `https://discord.com/oauth2/authorize?client_id=705237517292798055&response_type=code&redirect_uri=https%3A%2F%2F522f218c-2579-4e40-884e-ff7107524681-00-1ikdcsak5olgv.janeway.replit.dev%3A3001%2Fauth%2Fcallback%2F&scope=identify`;
+  "https://f1149cff-e1b3-4284-92fe-839b7ebec444-00-2ks36pr5kcad7.worf.replit.dev";
+let authUrl = `https://discord.com/oauth2/authorize?client_id=705237517292798055&response_type=code&redirect_uri=https%3A%2F%2Ff1149cff-e1b3-4284-92fe-839b7ebec444-00-2ks36pr5kcad7.worf.replit.dev%3A3001%2Fauth%2Fcallback%2F&scope=identify`;
 
 const app = express();
-
-/*app.use(async(req, res, next) => {
-  URI = req.headers.referer.slice(0, -1)
-  next(); 
-});*/
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = `${URI}:3001/auth/callback/`;
 const FRONTEND_URI = URI;
-
-// console.log(REDIRECT_URI);
 
 app.use(cors({ origin: FRONTEND_URI, credentials: true }));
 app.use(bodyParser.json());
@@ -78,7 +70,7 @@ app.get("/auth/callback", async (req, res) => {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-      },
+      }
     );
 
     const userResponse = await axios.get("https://discord.com/api/users/@me", {
@@ -112,7 +104,7 @@ app.get("/api/user/:id", async (req, res) => {
         { onlyOnce: true },
         (error) => {
           reject(error);
-        },
+        }
       );
     });
     if (!raw) return res.status(404).send("User not found on Kanyon database");
@@ -163,7 +155,7 @@ app.get("/api/user/:id/bgs", async (req, res) => {
         { onlyOnce: true },
         (error) => {
           reject(error);
-        },
+        }
       );
     });
 
@@ -196,7 +188,7 @@ app.get("/api/user/:id/medals", async (req, res) => {
         { onlyOnce: true },
         (error) => {
           reject(error);
-        },
+        }
       );
     });
 
@@ -234,12 +226,11 @@ app.put("/api/user/", async (req, res) => {
         acc[medal.icon] = true;
         return acc;
       },
-      {},
+      {}
     );
 
     update(ref(database), updates);
 
-    //console.log("Alterações realizadas com sucesso.");
     res.status(200).json({ message: "Alterações realizadas com sucesso." });
   } catch (error) {
     console.error(error);

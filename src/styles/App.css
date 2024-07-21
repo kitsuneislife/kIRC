@@ -3,7 +3,8 @@
   display: grid;
   grid-template-areas:
     /*'header'*//*'header'*/
-    'nav header'
+    /* 'nav header' */
+    'nav main'
     'nav main';
   grid-template-rows: min-content;
   grid-template-columns: min-content;
@@ -54,13 +55,24 @@
   margin-left: auto;
 }
 
+.nav__avatar {
+  width: 128px; 
+  border-radius: 50%;
+  align-self: center;
+}
+
+.nav__username {
+  margin: 10px 0px 10px 0px;
+  align-self: center;
+  color: white;
+}
+
 .nav__opt {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
   padding: 5px 20px;
-  cursor: pointer;
   transition: all .2s;
   margin-top: auto;
 }
@@ -70,7 +82,14 @@
 }
 
 .nav__opt i {
+  cursor: pointer;
   color: var(--prm-highlight);
+}
+
+.nav__build {
+  color: #fff;
+  font-size: 10px;
+  font-family: 'Fira Code', monospace;
 }
 
 .select-container {
@@ -132,4 +151,16 @@
 .nav__profile i {
   color: var(--prm-highlight);
   margin-left: auto;
+}
+
+.main--login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login__banner {
+ width: 400px;
 }

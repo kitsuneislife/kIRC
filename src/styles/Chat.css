@@ -1,0 +1,83 @@
+
+.main--chat {
+  position: relative;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  max-height: 90vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+li img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.msg_row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.msg_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.msg_line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  transition: all .2s;
+}
+
+.msg_line:hover {
+  background-color: var(--qrt)
+}
+.mspecial {
+  transition: all .2s;
+}
+.mspecial:hover {
+  background-color: var(--qrt)
+}
+
+small {
+  filter: opacity(0.2);
+}
+
+.msg_line small {
+  margin-left: 15.5px;
+}
+
+.send__container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: sticky
+}
+
+.send__container input {
+  width: 100%;
+}

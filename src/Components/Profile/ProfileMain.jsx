@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { UserContext } from "../../toolbox/UserContext";
 import axios from "axios";
 
 const path = "https://cdn.pollux.gg/";
 
 export default function AppMain() {
+  const { user } = useContext(UserContext);
   const { userId } = useParams();
   const [userProfile, setUserProfile] = useState(null);
 
@@ -42,7 +44,7 @@ export default function AppMain() {
           </div>
           <div className="profile__header__box">
             <div className="profile__header__avatar">
-              <img src={userProfile.avatar} />
+              <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`} />
             </div>
             <div className="profile__header__nametag">
               <span>{userProfile.username}</span>

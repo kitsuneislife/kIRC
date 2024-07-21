@@ -4,7 +4,7 @@
   "type": "module",
   "description": "React TypeScript on Replit, using Vite bundler",
   "scripts": {
-    "start": "concurrently \"npm run dev\" \"node ./server/Index.js\"",
+    "start": "concurrently \"npm run dev\" \"node ./server/Index.js\" 'node ./server/Socket.js'",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -24,14 +24,19 @@
   "dependencies": {
     "@firebase/app": "^0.10.5",
     "@firebase/database": "^1.0.5",
+    "@replit/database": "^3.0.1",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "date-fns": "^3.6.0",
     "express": "^4.19.2",
     "express-server": "^0.7.0",
     "express-session": "^1.18.0",
-    "react-router-dom": "^6.24.0"
+    "http": "^0.0.1-security",
+    "react-router-dom": "^6.24.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
   }
 }

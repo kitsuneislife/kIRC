@@ -194,7 +194,7 @@ const ProfileEdit = () => {
         <div className="profile__header--left">
           <div className="profile__header__box--edit">
             <div className="profile__header__avatar">
-              <img src={userProfile.avatar}/>
+              <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`}/>
             </div>
             <div className="profile__header__nametag">
               <span>{userProfile.username}</span>

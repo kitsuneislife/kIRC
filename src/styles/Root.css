@@ -27,14 +27,14 @@
   --prm-highlight: var(--prm-highlight-light);
 }
 
-@font-face { src: url("../public/Fonts/AvenirNextRoundedBold.ttf"); font-family: 'AvenirNextRoundedBold'; }
-@font-face { src: url("../public/Fonts/CLR.otf"); font-family: 'CLR'; }
-@font-face { src: url("../public/Fonts/DXLBaB.ttf"); font-family: 'DXLBaB'; }
-@font-face { src: url("../public/Fonts/PantonBlack.otf"); font-family: 'Panton Black'; }
-@font-face { src: url("../public/Fonts/PantonBlackItalic.otf"); font-family: 'Panton Black Italic'; }
-@font-face { src: url("../public/Fonts/PantonLight.otf"); font-family: 'Panton Light'; }
-@font-face { src: url("../public/Fonts/PantonLightItalic.otf"); font-family: 'Panton Light Italic'; }
-@font-face { src: url("../public/Fonts/Quicksand.ttf"); font-family: 'Quicksand'; }
+@font-face { src: url("/Fonts/AvenirNextRoundedBold.ttf"); font-family: 'AvenirNextRoundedBold'; }
+@font-face { src: url("/Fonts/CLR.otf"); font-family: 'CLR'; }
+@font-face { src: url("/Fonts/DXLBaB.ttf"); font-family: 'DXLBaB'; }
+@font-face { src: url("/Fonts/PantonBlack.otf"); font-family: 'Panton Black'; }
+@font-face { src: url("  /Fonts/PantonBlackItalic.otf"); font-family: 'Panton Black Italic'; }
+@font-face { src: url("/Fonts/PantonLight.otf"); font-family: 'Panton Light'; }
+@font-face { src: url("/Fonts/PantonLightItalic.otf"); font-family: 'Panton Light Italic'; }
+@font-face { src: url("/Fonts/Quicksand.ttf"); font-family: 'Quicksand'; }
 
 
 html, body, #root, .app__body {

@@ -414,6 +414,7 @@
   bottom: 15px;
   left: 50%;
   transform: translate(-50%);
+  transition: all .2s;
 }
 
 .profile__save__modal div {
